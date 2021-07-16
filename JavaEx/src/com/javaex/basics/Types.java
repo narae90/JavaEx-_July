@@ -4,10 +4,44 @@ package com.javaex.basics;
 // 데이터 타입 예제
 public class Types {
 	public static void main(String[] args) {
-		varEx();
+//		varEx();
+		integerEx();
 	
 		
 	}
+	//정수형 데이터 타입
+	private static void integerEx( ) {
+		// byte(1) < short(2) < int(4) < long(8)
+		int intVar1, intVar2; //선언
+		
+		intVar1 = 2021; //초기화
+		//intVar2 = 1234567890123; // out of range : 저장범위 초과
+		System.out.println(Integer.toBinaryString(intVar1));
+		
+		long longVar1, longVar2;
+		
+		longVar1=2021;
+		longVar2=1234567890123L; // 끝에 L or l 
+		
+		System.out.println(longVar1);
+		System.out.println(longVar2);
+		
+		// 2진수, 8진수, 16진수
+		int bin, oct, hex;
+		
+		bin = 0b1101; // 2진수 0b -> 13 : 10진수
+		oct = 072; // 8진수 0 -> 58 : 10진수
+		hex = 0xFF; //16진수 0x
+		
+		System.out.println(bin);
+		System.out.println(oct);
+		System.out.println(hex);
+		
+	}
+	
+	
+	
+	
 	
 	// 변수의 선언과 사용 
 	private static void varEx() {
