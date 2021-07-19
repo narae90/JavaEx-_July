@@ -21,7 +21,7 @@ public class ConsoleEx {
 		System.out.println("나이:");
 		int age = scanner.nextInt();
 
-		System.out.println("당신의 이름은 " + name + "나이는" + age + "입니다.");
+		System.out.println("당신의 이름은 " + name + ", 나이는" + age + "입니다.");
 		
 		// 중요 : 시스템 자원을 사용하는 클래스는 사용 이후 반드시 닫아줘야 한다
 		scanner.close();
