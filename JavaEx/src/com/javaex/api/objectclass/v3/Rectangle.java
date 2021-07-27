@@ -4,10 +4,10 @@ package com.javaex.api.objectclass.v3;
  * @author Administrator
  *
  */
-public class Rectangle {
+public class Rectangle implements Cloneable {
 	// 필드
-	private int width;
-	private int height;
+	int width;
+	int height;
 
 	// 생성자 (초기화 작업)
 	public Rectangle( int width, int height) {
@@ -32,6 +32,18 @@ public class Rectangle {
 		}
 		
 		return super.equals(obj);
+	}
+	
+	// 복제 객체를 생성하는 메소드 
+	public Rectangle getClone() {
+		Rectangle clone = null;
+		
+		try {
+			clone = (Rectangle)clone();
+		}catch(CloneNotSupportedException e) {
+			e.printStackTrace();
+		}
+		return clone;
 	}
 	
 }

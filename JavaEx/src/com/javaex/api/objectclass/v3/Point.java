@@ -30,5 +30,17 @@ public class Point implements Cloneable {
 		return super.equals(obj);
 	}
 	
+	// 복제 객체를 생성하는 메소드
+	public Point getClone() {
+		Point clone = null;
+		
+		try {
+		clone = (Point)clone(); // clone() 메소드는 checked 예외
+		}catch (CloneNotSupportedException e) {
+			e.printStackTrace();
+		}
+		return clone;
+	}
+	
 	
 }
