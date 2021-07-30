@@ -1,13 +1,11 @@
 package com.javaex.api.collection.hash;
 
 public class ClassRoom {
-	// ÇÊµå
-	
+	//	필드
 	private String subject;
 	private String roomName;
 	
-	
-	// »ý¼ºÀÚ
+	//	생성자
 	public ClassRoom(String subject) {
 		this.subject = subject;
 	}
@@ -15,7 +13,6 @@ public class ClassRoom {
 	public ClassRoom(String subject, String roomName) {
 		this(subject);
 		this.roomName = roomName;
-		
 	}
 
 	@Override
@@ -23,9 +20,6 @@ public class ClassRoom {
 		return "ClassRoom [subject=" + subject + ", roomName=" + roomName + "]";
 	}
 
-	
-	// HashTable Å¬·¡½º 
-	
 	@Override
 	public int hashCode() {
 		return subject.hashCode();
@@ -33,17 +27,11 @@ public class ClassRoom {
 
 	@Override
 	public boolean equals(Object obj) {
-		if(obj instanceof ClassRoom) {
+		if (obj instanceof ClassRoom) {
 			return obj.hashCode() == hashCode();
 		}
 		return super.equals(obj);
 	}
-	
-	
-	
-
-	
-	
 	
 	
 }
