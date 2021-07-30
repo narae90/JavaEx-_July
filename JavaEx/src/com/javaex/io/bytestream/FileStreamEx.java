@@ -25,9 +25,9 @@ public class FileStreamEx {
 				os.write(data);
 			}
 			
-			System.out.println("ÆÄÀÏÀ» º¹»çÇß½À´Ï´Ù!");
+			System.out.println("íŒŒì¼ì„ ë³µì‚¬í–ˆìŠµë‹ˆë‹¤!");
 		} catch(FileNotFoundException e) {
-			System.err.println("ÆÄÀÏÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù.");
+			System.err.println("íŒŒì¼ì„ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}finally {

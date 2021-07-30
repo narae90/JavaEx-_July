@@ -8,33 +8,33 @@ public class FileClassEx {
 	
 	static final String rootPath = System.getProperty("user.dir") + "\\files\\";
 	public static void main(String[] args) {
-		// ÆÄÀÏ °´Ã¼
+		// íŒŒì¼ ê°ì²´
 		File root = new File(rootPath);
-		// ÆÄÀÏÀÌ ½ÇÁ¦ Á¸ÀçÇÏ´Â°¡?
+		// íŒŒì¼ì´ ì‹¤ì œ ì¡´ì¬í•˜ëŠ”ê°€?
 		System.out.println(rootPath + ":" + root.exists());
 		
 		printInfo(root);
 		
 		
 		
-		if(!root.exists()) { // °æ·Î°¡ Á¸ÀçÇÏÁö ¾ÊÀ¸¸é
-			// µğ·ºÅä¸® »ı¼º
+		if(!root.exists()) { // ê²½ë¡œê°€ ì¡´ì¬í•˜ì§€ ì•Šìœ¼ë©´
+			// ë””ë ‰í† ë¦¬ ìƒì„±
 			root.mkdirs();			
 		}
 		
-		// µğ·ºÅä¸® ³»ºÎ¿¡ ÆÄÀÏÀ» »ı¼ºÇØ º¾½Ã´Ù.
+		// ë””ë ‰í† ë¦¬ ë‚´ë¶€ì— íŒŒì¼ì„ ìƒì„±í•´ ë´…ì‹œë‹¤.
 		File newFile = new File(rootPath + "myFile.txt");
-		if(!newFile.exists()) { // myfile.txt°¡ ¾øÀ¸¸é
-			// ÆÄÀÏ»ı¼º
+		if(!newFile.exists()) { // myfile.txtê°€ ì—†ìœ¼ë©´
+			// íŒŒì¼ìƒì„±
 			try {
 				newFile.createNewFile();
 			} catch(IOException e) {
-				System.out.println("ÆÄÀÏÀ» ¸¸µéÁö ¸øÇß¾î¿ä");
+				System.out.println("íŒŒì¼ì„ ë§Œë“¤ì§€ ëª»í–ˆì–´ìš”");
 			}
 			
 		}
 		printInfo(root);
-		// ÆÄÀÏÀ» Áö¿î´Ù
+		// íŒŒì¼ì„ ì§€ìš´ë‹¤
 		newFile.delete();
 		printInfo(root);
 
@@ -44,22 +44,22 @@ public class FileClassEx {
 	 private static void printInfo(File f) {
 		 System.out.println("-------------------");
 		 
-		 // Àü´Ş ¹ŞÀº ÆÄÀÏ °´Ã¼°¡ µğ·ºÅä¸®ÀÎ°¡?
-		 if(f.isDirectory()) { // µğ·ºÅä¸®
-			 // µğ·ºÅä¸® ³»ºÎÀÇ ÆÄÀÏ ¸ñ·ÏÀ» ¹Ş¾Æ¿Í¼­ Ãâ·Â
+		 // ì „ë‹¬ ë°›ì€ íŒŒì¼ ê°ì²´ê°€ ë””ë ‰í† ë¦¬ì¸ê°€?
+		 if(f.isDirectory()) { // ë””ë ‰í† ë¦¬
+			 // ë””ë ‰í† ë¦¬ ë‚´ë¶€ì˜ íŒŒì¼ ëª©ë¡ì„ ë°›ì•„ì™€ì„œ ì¶œë ¥
 			 System.out.println("Directory : " + f.getName());
-			 // ¸ñ·Ï ºÒ·¯¿À±â
+			 // ëª©ë¡ ë¶ˆëŸ¬ì˜¤ê¸°
 			 File[] files = f.listFiles();
 			 
-			 // ¸®½ºÆ® Ãâ·Â
+			 // ë¦¬ìŠ¤íŠ¸ ì¶œë ¥
 			 for(File file: files) {
 				 System.out.print(file.isDirectory() ? "d":"f");
 				 System.out.printf("%s - %d%n", file.getName(), file.length());
 				 
 			 }
-		 }else { // ÆÄÀÏ
-			 //  ÆÄÀÏÀÇ ÀÌ¸§ Ãâ·Â
-			 System.out.println("File : " + f.getName()); // ÆÄÀÏÀÇ ÀÌ¸§ Ãâ·Â
+		 }else { // íŒŒì¼
+			 //  íŒŒì¼ì˜ ì´ë¦„ ì¶œë ¥
+			 System.out.println("File : " + f.getName()); // íŒŒì¼ì˜ ì´ë¦„ ì¶œë ¥
 			 
 		 }
 		 
