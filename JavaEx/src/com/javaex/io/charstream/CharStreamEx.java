@@ -40,19 +40,19 @@ public class CharStreamEx {
 	
 	
 	private static void writeTest() {
-		Writer fwriter = null; // Ä³¸¯ÅÍ ±â¹İ Ãâ·Â ½ºÆ®¸²ÀÇ ÃÖ°í Á¶»ó
+		Writer fwriter = null; // ìºë¦­í„° ê¸°ë°˜ ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ì˜ ìµœê³  ì¡°ìƒ
 		
 		try {
-			// Ãâ·Â ½ºÆ®¸² »ı¼º
-			fwriter = new FileWriter(filename, true); // ÆÄÀÏ¸í  // true => Ãß°¡ (append)
+			// ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ ìƒì„±
+			fwriter = new FileWriter(filename, true); // íŒŒì¼ëª…  // true => ì¶”ê°€ (append)
 			
-			// ±â·Ï
+			// ê¸°ë¡
 			fwriter.write("Bit Comuter\r\n");
 			fwriter.write("Java Progeammin\r\n");
 			fwriter.write("2021.07\r\n");
-			fwriter.flush(); // ¹öÆÛ ºñ¿ì±â
+			fwriter.flush(); // ë²„í¼ ë¹„ìš°ê¸°
 			
-			System.out.println("ÆÄÀÏÀ» ±â·ÏÇß½À´Ï´Ù.");
+			System.out.println("íŒŒì¼ì„ ê¸°ë¡í–ˆìŠµë‹ˆë‹¤.");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}finally {
