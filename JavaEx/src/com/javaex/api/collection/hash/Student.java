@@ -1,11 +1,11 @@
 package com.javaex.api.collection.hash;
 
 public class Student {
-	// ÇÊµå
+	// í•„ë“œ
 	String name;
 	int id;
 	
-	// »ı¼ºÀÚ
+	// ìƒì„±ì
 	Student(String name, int id){
 		this.name = name;
 		this.id = id;
@@ -18,16 +18,16 @@ public class Student {
 
 	
 	
-	// hashCode(), equals() ¸Ş¼Òµå ¿À¹ö¶óÀÌµå
+	// hashCode(), equals() ë©”ì†Œë“œ ì˜¤ë²„ë¼ì´ë“œ
 	@Override
 	public int hashCode() {
-		return id; // ÇĞ¹øÀ»  hashCode·Î ÀÌ¿ë
+		return id; // í•™ë²ˆì„  hashCodeë¡œ ì´ìš©
 	}
 
 	@Override
 	public boolean equals(Object obj) {
 		if (obj instanceof Student) {
-			// Ä³½ºÆÃ
+			// ìºìŠ¤íŒ…
 			Student other = (Student)obj;
 			return name.equals(other.name) && id == other.id;
 		}

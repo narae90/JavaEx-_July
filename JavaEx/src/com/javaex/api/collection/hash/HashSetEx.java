@@ -14,12 +14,12 @@ public class HashSetEx {
 	
 	
 	private static void customHashSet() {
-		// »ç¿ëÀÚ Á¤ÀÇ Å¬·¡½º¿¡¼­ÀÇ Hash
+		// ì‚¬ìš©ì ì •ì˜ í´ë˜ìŠ¤ì—ì„œì˜ Hash
 		HashSet<Student> hs = new HashSet<>();
 		
-		Student s1 = new Student("È«±æµ¿", 10);
-		Student s2 = new Student("È«±æµ¿", 20);
-		Student s3 = new Student("È«±æµ¿", 10);
+		Student s1 = new Student("í™ê¸¸ë™", 10);
+		Student s2 = new Student("í™ê¸¸ë™", 20);
+		Student s3 = new Student("í™ê¸¸ë™", 10);
 		
 		
 		hs.add(s1); hs.add(s2); hs.add(s3);
@@ -30,37 +30,37 @@ public class HashSetEx {
 		System.out.println(s1.equals(s3));
 		
 		
-		// Æ÷ÇÔ ¿©ºÎÀÇ È®ÀÎ
-		System.out.println(hs.contains(new Student("È«±æµ¿", 10)));
+		// í¬í•¨ ì—¬ë¶€ì˜ í™•ì¸
+		System.out.println(hs.contains(new Student("í™ê¸¸ë™", 10)));
 //		System.out.println(hs.contains(s1));
 		
 		
 	}
 	private static void basicHashSet() {
-		// »ı¼º
+		// ìƒì„±
 		HashSet<String> hs = new HashSet<>();
 		
-		// °´Ã¼ Ãß°¡
+		// ê°ì²´ ì¶”ê°€
 		hs.add("Java");
 		hs.add("C");
 		hs.add("C++");
 		hs.add("Python");
-		hs.add("Java"); // Áßº¹ »ğÀÔ Çã¿ë ¾ÊÀ½
+		hs.add("Java"); // ì¤‘ë³µ ì‚½ì… í—ˆìš© ì•ŠìŒ
 		
 		System.out.println(hs);
-		System.out.println("hs size = " + hs.size()); // ³»ºÎ ¿ä¼ö °¹¼ö
+		System.out.println("hs size = " + hs.size()); // ë‚´ë¶€ ìš”ìˆ˜ ê°¯ìˆ˜
 		
-		// ÁöÁ¤ °´Ã¼ Æ÷ÇÔ ¿©ºÎ : contains();
-		System.out.println("Java Æ÷ÇÔ ? " + hs.contains("Java"));
-		System.out.println("Linux Æ÷ÇÔ ? " + hs.contains("Linux"));
+		// ì§€ì • ê°ì²´ í¬í•¨ ì—¬ë¶€ : contains();
+		System.out.println("Java í¬í•¨ ? " + hs.contains("Java"));
+		System.out.println("Linux í¬í•¨ ? " + hs.contains("Linux"));
 		
 		
-		// °´Ã¼ »èÁ¦ : remove
-		hs.remove("C++");  // C++ »èÁ¦
+		// ê°ì²´ ì‚­ì œ : remove
+		hs.remove("C++");  // C++ ì‚­ì œ
 		System.out.println(hs);
 		
 		
-		hs.clear(); // ¼Â ºñ¿ì±â
+		hs.clear(); // ì…‹ ë¹„ìš°ê¸°
 		System.out.println(hs);
 	}
 

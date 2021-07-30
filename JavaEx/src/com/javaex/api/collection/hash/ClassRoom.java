@@ -1,13 +1,13 @@
 package com.javaex.api.collection.hash;
 
 public class ClassRoom {
-	// ÇÊµå
+	// Ã‡ÃŠÂµÃ¥
 	
 	private String subject;
 	private String roomName;
 	
 	
-	// »ý¼ºÀÚ
+	// Â»Ã½Â¼ÂºÃ€Ãš
 	public ClassRoom(String subject) {
 		this.subject = subject;
 	}
@@ -24,7 +24,7 @@ public class ClassRoom {
 	}
 
 	
-	// HashTable Å¬·¡½º 
+	// HashTable Ã…Â¬Â·Â¡Â½Âº 
 	
 	@Override
 	public int hashCode() {
