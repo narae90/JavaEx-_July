@@ -6,7 +6,7 @@ public class HashSetEx {
 
 	
 	public static void main(String[] args) {
-//		basicHashSet();
+		basicHashSet();
 		customHashSet();
 
 	}
@@ -20,7 +20,6 @@ public class HashSetEx {
 		Student s1 = new Student("홍길동", 10);
 		Student s2 = new Student("홍길동", 20);
 		Student s3 = new Student("홍길동", 10);
-		
 		
 		hs.add(s1); hs.add(s2); hs.add(s3);
 		
